@@ -9,7 +9,8 @@ GameManager::GameManager(Camera* camera) {
 	cameraController = new CameraController(camera);
 
 	// sky color
-	glClearColor(0.815f, 0.925f, 0.992f, 1.0f);
+	glm::vec3 skyColor = glm::vec3(0.815f, 0.925f, 0.992f);
+	glClearColor(skyColor.x, skyColor.y, skyColor.z, 1.0f);
 
 	renderer = new Renderer(camera);
 

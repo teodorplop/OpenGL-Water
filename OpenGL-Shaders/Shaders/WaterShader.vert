@@ -24,8 +24,10 @@ uniform vec3 lightPosition;
 
 void main() {
   vec4 worldPosition = gWorld * inPosition;
+	vec4 positionRelativeToCamera = gCamera * worldPosition;
+	float distance = length(positionRelativeToCamera.xyz);
 
-	Out.worldPosition = gProj * gCamera * worldPosition;
+	Out.worldPosition = gProj * positionRelativeToCamera;
 	Out.textureCoord = inTextureCoord * textureTiling;
 	Out.normal = inNormal;
 	Out.toCamera = cameraPosition - worldPosition.xyz;
