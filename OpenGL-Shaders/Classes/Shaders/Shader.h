@@ -6,12 +6,12 @@
 
 class Shader {
 private:
-	GLuint vertexShader, fragmentShader, shaderProgram;
-	void CompileShaders(const char* vertexSource, const char* fragmentSource);
+	GLuint vertexShader, fragmentShader, geometryShader, shaderProgram;
+	void CompileShaders(const char* vertexSource, const char* fragmentSource, const char* geometrySource);
 	GLuint Compile(GLuint type, const char* source);
 
 public:
-	Shader(const char* vertexFile, const char* fragmentFile);
+	Shader(const char* vertexFile, const char* fragmentFile, const char* geometryFile = NULL);
 	~Shader();
 
 	void Bind();

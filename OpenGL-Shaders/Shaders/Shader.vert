@@ -22,7 +22,6 @@ uniform float textureTiling;
 void main() {
   vec4 worldPosition = gWorld * inPosition;
 	vec4 positionRelativeToCamera = gCamera * worldPosition;
-	float distance = length(positionRelativeToCamera.xyz);
 	
 	gl_Position = gProj * positionRelativeToCamera;
 	gl_ClipDistance[0] = dot(worldPosition, clipPlane);
