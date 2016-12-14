@@ -30,6 +30,7 @@ void Renderer::EnableClipPlane(glm::vec4 clipPlane) {
 
 void Renderer::DisableClipPlane() {
 	this->clipPlaneEnabled = false;
+	this->clipPlane = glm::vec4(0, -1, 0, 10000);
 }
 
 void Renderer::Render() {
@@ -50,9 +51,7 @@ void Renderer::Render() {
 		vArray->Bind();
 		iBuffer->Bind();
 
-		if (clipPlaneEnabled) {
-			shader->SetUniform4f("clipPlane", clipPlane);
-		}
+		shader->SetUniform4f("clipPlane", clipPlane);
 
 		shader->SetUniform1f("textureTiling", renderable->GetTextureTiling());
 		shader->SetUniform3f("directionalLight.color", Light::color);
