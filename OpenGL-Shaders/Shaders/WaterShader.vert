@@ -15,10 +15,12 @@ out DATA {
 	vec2 textureCoord;
 	vec3 normal;
 	vec3 toCamera;
+	vec3 fromLight;
 } Out;
 
 uniform float textureTiling;
 uniform vec3 cameraPosition;
+uniform vec3 lightPosition;
 
 void main() {
   vec4 worldPosition = gWorld * inPosition;
@@ -28,6 +30,7 @@ void main() {
 	Out.textureCoord = inTextureCoord * textureTiling;
 	Out.normal = inNormal;
 	Out.toCamera = cameraPosition - worldPosition.xyz;
+	Out.fromLight = worldPosition.xyz - lightPosition;
 
 	gl_Position = Out.worldPosition;
 }

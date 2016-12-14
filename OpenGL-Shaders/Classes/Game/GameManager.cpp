@@ -4,6 +4,7 @@
 #include "../Shaders/Shader.h"
 
 #include "Terrain\Terrain.h"
+#include "Terrain\HeightMapGenerator.h"
 
 void Test(Camera* camera) {
 	CameraController* cameraController = new CameraController(camera);
@@ -55,6 +56,8 @@ void Test(Camera* camera) {
 GameManager::GameManager(Camera* camera) {
 	//Test(camera);
 	//return;
+
+	HeightMapGenerator::Generate("Textures/HeightMaps/heightMap", 256, 256, 7, 0);
 
 	cameraController = new CameraController(camera);
 
