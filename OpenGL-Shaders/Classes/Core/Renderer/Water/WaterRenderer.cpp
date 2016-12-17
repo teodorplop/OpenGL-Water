@@ -58,6 +58,7 @@ void WaterRenderer::Render(WaterFrameBuffer* waterFrameBuffer) {
 		shader->SetUniform1f("moveFactor", water->GetMoveFactor());
 		shader->SetUniform1f("textureTiling", water->textureTiling);
 		shader->SetUniform1f("distorsionStrength", water->distorsionStrength);
+		shader->SetUniform1f("specularPower", water->specularPower);
 		shader->SetUniformMatrix4fv("gProj", camera->GetProjectionMatrix());
 		shader->SetUniformMatrix4fv("gCamera", camera->GetViewMatrix());
 		shader->SetUniformMatrix4fv("gWorld", water->GetTransform()->GetMatrix());

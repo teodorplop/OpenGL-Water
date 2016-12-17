@@ -23,6 +23,8 @@ public:
 
 	float textureTiling;
 	float distorsionStrength;
+	float moveSpeed;
+	float specularPower;
 
 	void SetMesh(Mesh* mesh);
 	void SetShader(Shader* shader);

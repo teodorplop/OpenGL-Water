@@ -18,6 +18,7 @@ uniform sampler2D depthSampler;
 
 uniform float moveFactor;
 uniform float distorsionStrength;
+uniform float specularPower;
 uniform vec3 lightColor;
 uniform float near;
 uniform float far;
@@ -64,7 +65,7 @@ void main() {
 
 	vec3 reflectedLight = reflect(normalize(In.fromLight), normal);
 	float specular = max(dot(reflectedLight, viewVector), 0.0);
-	specular = pow(specular, 20.0);
+	specular = pow(specular, specularPower);
 	vec3 specularHighlights = lightColor * specular * 0.5;
 
 	outColor = mix(reflectColor, refractColor, refractiveFactor);

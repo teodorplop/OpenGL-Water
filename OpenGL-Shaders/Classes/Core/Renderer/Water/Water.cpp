@@ -7,7 +7,9 @@ Water::Water() {
 	transform = new Transform();
 	textureTiling = 1;
 	moveFactor = 0;
+	moveSpeed = 1.0f / 40.0f;
 	distorsionStrength = 0.04f;
+	specularPower = 20.0f;
 }
 
 Water::~Water() {
@@ -54,7 +56,7 @@ Transform* Water::GetTransform() {
 }
 
 void Water::Tick() {
-	moveFactor += TimeFrame::deltaTime / 40.0f;
+	moveFactor += TimeFrame::deltaTime * moveSpeed;
 	moveFactor = fmod(moveFactor, 1.0f);
 }
 
