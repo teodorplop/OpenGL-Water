@@ -13,7 +13,7 @@ You have access to a few arguments in order to change the water effects:
 * Distorsion Strength, using *Mouse Scroll* while holding down *2*
 * Distorsion Speed, using *Mouse Scroll* while holding down *3*
 * Specular Power, using *Mouse Scroll* while holding down *4*
-* Light Color, using *Mouse Scroll* while holding down *5*, *6* or *7* for *R*, *G* or *B* channels
+* Light Color, using *Mouse Scroll* while holding down *5*, *6* or *7* for R, G or B channels
 
 ### Importing
 
