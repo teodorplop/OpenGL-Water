@@ -9,11 +9,11 @@ OpenGL Water Rendering engine. Water is made of a simple quad having multiple ef
 ### Available Commands
 
 You have access to a few arguments in order to change the water effects:
-* Texture Tiling, using Mouse Scroll while holding down 1
-* Distorsion Strength, using Mouse Scroll while holding down 2
-* Distorsion Speed, using Mouse Scroll while holding down 3
-* Specular Power, using Mouse Scroll while holding down 4
-* Light Color, using Mouse Scroll while holding down 5, 6 or 7 for R, G or B channels
+* Texture Tiling, using *Mouse Scroll* while holding down *1*
+* Distorsion Strength, using *Mouse Scroll* while holding down *2*
+* Distorsion Speed, using *Mouse Scroll* while holding down *3*
+* Specular Power, using *Mouse Scroll* while holding down *4*
+* Light Color, using *Mouse Scroll* while holding down *5*, *6* or *7* for *R*, *G* or *B* channels
 
 ### Importing
 
