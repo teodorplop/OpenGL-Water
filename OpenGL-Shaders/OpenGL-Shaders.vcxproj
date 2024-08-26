@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{46EFD2A2-871B-4ABA-9C91-0F8702C616FF}</ProjectGuid>
+    <RootNamespace>OpenGLShaders</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\bin\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\bin\$(Configuration)\Intermediate\</IntDir>
+    <IncludePath>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\FreeImage\include;$(SolutionDir)Dependencies\GLM;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\GLEW\lib\x64;$(SolutionDir)Dependencies\GLFW\lib;$(SolutionDir)Dependencies\FreeImage\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;glfw3.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\Core\Buffers\Buffer.cpp" />
+    <ClCompile Include="Classes\Core\Buffers\IndexBuffer.cpp" />
+    <ClCompile Include="Classes\Core\Buffers\VertexArray.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\Light.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\Water\Water.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\Water\WaterFrameBuffer.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\Water\WaterRenderer.cpp" />
+    <ClCompile Include="Classes\Core\Texture.cpp" />
+    <ClCompile Include="Classes\Game\CameraController.cpp" />
+    <ClCompile Include="Classes\Core\Camera.cpp" />
+    <ClCompile Include="Classes\Core\Engine.cpp" />
+    <ClCompile Include="Classes\Core\Input.cpp" />
+    <ClCompile Include="Classes\Core\TimeFrame.cpp" />
+    <ClCompile Include="Classes\Core\Window.cpp" />
+    <ClCompile Include="Classes\Game\Terrain\HeightMapGenerator.cpp" />
+    <ClCompile Include="Classes\Game\Terrain\Terrain.cpp" />
+    <ClCompile Include="Classes\Objects\ObjLoader.cpp" />
+    <ClCompile Include="Classes\Core\Tickable\ITickable.cpp" />
+    <ClCompile Include="Classes\Core\Tickable\TickEngine.cpp" />
+    <ClCompile Include="Classes\Shaders\Shader.cpp" />
+    <ClCompile Include="Classes\Utils\FileIO.cpp" />
+    <ClCompile Include="Classes\Game\GameManager.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\Renderable.cpp" />
+    <ClCompile Include="Classes\Utils\ImageUtils.cpp" />
+    <ClCompile Include="Classes\Utils\Random.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\MasterRenderer.cpp" />
+    <ClCompile Include="Classes\Core\Mesh.cpp" />
+    <ClCompile Include="Classes\Core\Transform.cpp" />
+    <ClCompile Include="Classes\Core\Renderer\Renderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\Core\Buffers\Buffer.h" />
+    <ClInclude Include="Classes\Core\Buffers\IndexBuffer.h" />
+    <ClInclude Include="Classes\Core\Buffers\VertexArray.h" />
+    <ClInclude Include="Classes\Core\Renderer\Water.h" />
+    <ClInclude Include="Classes\Core\Renderer\WaterRenderer.h" />
+    <ClInclude Include="Classes\Core\Renderer\Water\Water.h" />
+    <ClInclude Include="Classes\Core\Renderer\Water\WaterFrameBuffer.h" />
+    <ClInclude Include="Classes\Core\Renderer\Water\WaterRenderer.h" />
+    <ClInclude Include="Classes\Core\Texture.h" />
+    <ClInclude Include="Classes\Game\CameraController.h" />
+    <ClInclude Include="Classes\Core\Camera.h" />
+    <ClInclude Include="Classes\Core\Engine.h" />
+    <ClInclude Include="Classes\Core\Input.h" />
+    <ClInclude Include="Classes\Core\TimeFrame.h" />
+    <ClInclude Include="Classes\Core\Window.h" />
+    <ClInclude Include="Classes\Core\Renderer\Light.h" />
+    <ClInclude Include="Classes\Game\Terrain\HeightMapGenerator.h" />
+    <ClInclude Include="Classes\Game\Terrain\Terrain.h" />
+    <ClInclude Include="Classes\Objects\ObjLoader.h" />
+    <ClInclude Include="Classes\Core\Tickable\ITickable.h" />
+    <ClInclude Include="Classes\Core\Tickable\TickEngine.h" />
+    <ClInclude Include="Classes\Shaders\Shader.h" />
+    <ClInclude Include="Classes\Utils\FileIO.h" />
+    <ClInclude Include="Classes\Game\GameManager.h" />
+    <ClInclude Include="Classes\Core\Renderer\MasterRenderer.h" />
+    <ClInclude Include="Classes\Core\Renderer\Renderable.h" />
+    <ClInclude Include="Classes\Core\Mesh.h" />
+    <ClInclude Include="Classes\Core\Transform.h" />
+    <ClInclude Include="Classes\Core\Renderer\Renderer.h" />
+    <ClInclude Include="Classes\Utils\ImageUtils.h" />
+    <ClInclude Include="Classes\Utils\Random.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\MyShader.frag" />
+    <None Include="Shaders\MyShader.geom" />
+    <None Include="Shaders\MyShader.vert" />
+    <None Include="Shaders\Shader.frag" />
+    <None Include="Shaders\Shader.vert" />
+    <None Include="Shaders\WaterShader.frag" />
+    <None Include="Shaders\WaterShader.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
