@@ -2,6 +2,8 @@
 
 A real-time OpenGL water and terrain rendering project. Originally built on Windows using Visual Studio, this project has been ported to Linux using cross-platform **CMake** and **C++17**.
 
+<img width="1016" height="789" alt="image" src="https://github.com/user-attachments/assets/871265b8-386b-4d9e-8e7d-b385c8f24ca5" />
+
 ## Features
 
 Water is made of a simple quad having multiple effects on it, like:
