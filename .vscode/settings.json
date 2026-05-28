@@ -1,0 +1,11 @@
+{
+    "cmake.debugConfig": {
+        "cwd": "${workspaceFolder}",
+        "environment": [
+            {
+                "name": "GLFW_PLATFORM",
+                "value": "x11"
+            }
+        ]
+    }
+}
