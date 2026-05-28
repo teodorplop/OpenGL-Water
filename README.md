@@ -1,6 +1,6 @@
 # OpenGL Water Simulation
 
-A real-time OpenGL water and terrain rendering project. Originally built on Windows using Visual Studio, this project has been fully modernized and ported to Linux using cross-platform **CMake** and **C++17**.
+A real-time OpenGL water and terrain rendering project. Originally built on Windows using Visual Studio, this project has been ported to Linux using cross-platform **CMake** and **C++17**.
 
 ## Features
 
